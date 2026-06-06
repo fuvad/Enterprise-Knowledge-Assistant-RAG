@@ -1,0 +1,91 @@
+# Virtual Environment
+ekaenv/
+venv/
+env/
+ENV/
+.venv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Node/Frontend
+node_modules/
+.next/
+out/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Database & Docker
+postgres/data/
+qdrant/storage/
+docker-compose.override.yml
+
+# Local data (if not needed in repo)
+backend/data/pdfs/*
+backend/data/docx/*
+backend/data/github/*
+!backend/data/markdown/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+.tmp/
+temp/
+
+# IDE generated files
+.pytest.ini
+.coveragerc
