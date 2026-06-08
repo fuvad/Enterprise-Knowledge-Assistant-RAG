@@ -1,5 +1,6 @@
 from app.chunking.fixed_chunker import FixedChunker
 from app.chunking.recursive_chunker import RecursiveChunker
+from app.chunking.semantic_chunker import SemanticChunker
 
 
 class ChunkingPipeline:
@@ -7,6 +8,10 @@ class ChunkingPipeline:
         if method == "fixed":
             return (
                 FixedChunker(chunk_size).chunk(document)
+            )
+        elif method == "semantic":
+            return (
+                SemanticChunker().chunk(document)
             )
 
         return (

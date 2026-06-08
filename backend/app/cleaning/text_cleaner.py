@@ -3,7 +3,10 @@ import re
 
 class TextCleaner:
     def clean(self, text: str) -> str:
-        text = re.sub(r"\s+", " ", text)
-        text = text.strip()
+        # collapse multiple spaces/tabs
+        text = re.sub(r"[ \t]+", " ", text)
 
-        return text
+        # collapse excessive blank lines
+        text = re.sub(r"\n{3,}", "\n\n", text)
+
+        return text.strip()
