@@ -4,7 +4,6 @@ from app.ingestion.markdown_loader import MarkdownLoader
 
 
 class IngestionManager:
-
     def ingest(self, path):
 
         if path.endswith(".pdf"):

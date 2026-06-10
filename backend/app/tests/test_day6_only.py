@@ -1,23 +1,9 @@
-from app.embeddings.service import (
-    EmbeddingService
-)
+from app.embeddings.service import EmbeddingService
 
-text = [
-    "JWT tokens expire after 24 hours."
-]
+text = ["JWT tokens expire after 24 hours."]
 
-service = (
-    EmbeddingService(
-        "e5"
-    )
-)
+service = EmbeddingService("e5")
 
-embedding = (
-    service.embed(
-        text
-    )
-)
+embedding = service.embed(text)
 
-print(
-    embedding.shape
-)
+print(embedding.shape)
