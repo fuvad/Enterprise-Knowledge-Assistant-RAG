@@ -19,3 +19,11 @@ print("=" * 80)
 for point in results["bm25"]:
     print()
     print(point[1])
+    
+print()
+print("=" * 80)
+print("Hybrid")
+print("=" * 80)
+
+for point in results["hybrid"]:
+    print(print(point["text"]))
