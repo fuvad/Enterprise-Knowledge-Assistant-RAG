@@ -1,9 +1,5 @@
-from app.metadata.metadata_extractor import (
-    MetadataExtractor
-)
-
+from app.metadata.metadata_extractor import MetadataExtractor
 from app.schemas.metadata import Metadata
-
 
 class MetadataPipeline:
     def process(self,document):

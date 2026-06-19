@@ -10,3 +10,15 @@ Rules:
 Query:
 {query}
 """
+
+MULTI_QUERY_PROMPT = """
+Generate 5 different search queries.
+
+Requirements:
+- Preserve meaning.
+- Use different wording.
+- Return one query per line.
+
+Query:
+{query}
+"""
