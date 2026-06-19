@@ -1,9 +1,5 @@
-from app.metadata.metadata_rules import (
-    DEPARTMENT_RULES
-)
-
+from app.metadata.metadata_rules import DEPARTMENT_RULES
 import re
-
 
 class MetadataExtractor:
     def extract_department(self, text: str) -> str:

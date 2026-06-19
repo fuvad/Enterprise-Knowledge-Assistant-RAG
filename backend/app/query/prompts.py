@@ -19,6 +19,9 @@ Requirements:
 - Use different wording.
 - Return one query per line.
 
+Return exactly 5 queries.
+Each query must be on a new line.
+
 Query:
 {query}
 """
