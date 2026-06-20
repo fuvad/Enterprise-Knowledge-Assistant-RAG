@@ -1,6 +1,5 @@
 import re
 
-
 class TextCleaner:
     def clean(self, text: str) -> str:
         # collapse multiple spaces/tabs

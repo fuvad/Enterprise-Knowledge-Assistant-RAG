@@ -1,6 +1,6 @@
-from app.ingestion.ingestion_manager import (IngestionManager)
-from app.cleaning.pipeline import (CleaningPipeline)
-from app.metadata.pipeline import (MetadataPipeline)
+from app.ingestion.ingestion_manager import IngestionManager
+from app.cleaning.pipeline import CleaningPipeline
+from app.metadata.pipeline import MetadataPipeline
 
 manager = IngestionManager()
 

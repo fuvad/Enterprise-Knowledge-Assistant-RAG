@@ -1,11 +1,125 @@
 # Authentication
 
-Authentication is handled using JSON Web Tokens. Users receive an access token after successful login. Access tokens expire after twenty four hours. Refresh tokens generate new access tokens when required. Authentication middleware validates every incoming request. Invalid tokens result in unauthorized responses. Passwords are hashed before storage. Multi factor authentication adds an additional layer of security. Login attempts are monitored for suspicious activity. Security logs capture authentication events. Session revocation is supported through token blacklisting. Password reset links expire after a short period. User roles determine authorization levels. Access policies are centrally managed. Authentication failures generate alerts. Identity information is stored securely. Audit trails are maintained for compliance purposes. Security reviews are performed regularly. Authentication services operate independently from business services. Protecting user identities is a critical requirement.
+## JSON Web Tokens
+
+Authentication is commonly implemented using JSON Web Tokens. After a successful login, the server issues an access token to the client. The client includes this token in future requests. JWTs are stateless and can be verified without storing session data on the server.
+
+## Access Tokens
+
+Access tokens are short-lived credentials used to authorize requests. They typically expire after a predefined period. Short expiration times reduce security risks if a token is compromised. Applications often validate tokens on every request.
+
+## Refresh Tokens
+
+Refresh tokens allow users to obtain new access tokens without logging in again. They are usually stored more securely than access tokens. Refresh tokens often have longer lifetimes and may be revoked independently.
+
+## Password Hashing
+
+Passwords should never be stored in plain text. Modern systems use hashing algorithms such as bcrypt or Argon2. Hashing converts passwords into irreversible values. Even if a database is compromised, hashes help protect user credentials.
+
+## Multi Factor Authentication
+
+Multi factor authentication requires users to provide multiple forms of verification. Common factors include passwords, mobile authenticator codes, and hardware security keys. MFA significantly reduces the risk of account compromise.
+
+## Authorization
+
+Authentication verifies identity while authorization determines permissions. Role based access control is commonly used in enterprise systems. Users may belong to groups that define what resources they can access.
+
+## Audit Logging
+
+Security systems record authentication events in audit logs. These logs track successful logins, failed login attempts, and privilege changes. Audit records support compliance and security investigations.
+
+## Session Revocation
+
+Organizations sometimes need to invalidate active sessions. Session revocation can be implemented using token blacklists. Revoked tokens are rejected even if they have not yet expired.
+
+## Password Recovery
+
+Password reset workflows allow users to regain account access. Reset links should expire after a short period. Systems often require email verification before permitting password changes.
+
+## Identity Management
+
+Identity management systems maintain user profiles and credentials. Large organizations frequently integrate identity providers with multiple applications. Centralized identity management simplifies administration and security monitoring.
 
 # Cooking
 
-Cooking combines ingredients to create meals. Fresh vegetables are commonly used in healthy recipes. Olive oil is frequently used in Mediterranean cuisine. Pasta should be cooked in salted boiling water. Herbs improve flavor and aroma. Chefs often experiment with different ingredients. Baking requires precise measurements. Bread dough must rest before baking. Fresh basil pairs well with tomatoes. Soups can be prepared using seasonal vegetables. Grilling creates unique flavors. Different cultures have distinct culinary traditions. Spices contribute both flavor and color. Kitchen safety is important during food preparation. Recipes provide structured instructions. Cooking techniques improve with practice. Temperature control affects food quality. Proper storage prevents spoilage. Restaurants depend on efficient kitchen operations. Cooking is both a practical skill and an art form.
+## Healthy Ingredients
+
+Healthy meals often include vegetables, fruits, legumes, and whole grains. Nutrient rich ingredients contribute to balanced diets. Fresh ingredients generally provide better flavor and texture.
+
+## Mediterranean Cuisine
+
+Mediterranean cuisine emphasizes olive oil, vegetables, fish, and herbs. Many recipes rely on fresh ingredients rather than processed foods. This style of cooking is associated with several health benefits.
+
+## Pasta Preparation
+
+Pasta is typically cooked in salted boiling water. Different pasta shapes pair well with different sauces. Timing is important because overcooked pasta can become soft and lose texture.
+
+## Baking Basics
+
+Baking requires precise measurements and controlled temperatures. Small changes in ingredient ratios can significantly affect results. Bakers often use scales to improve consistency.
+
+## Bread Making
+
+Bread dough must be kneaded to develop gluten structure. After kneading, dough usually rests to allow fermentation. Proper fermentation contributes to flavor and texture.
+
+## Herbs and Spices
+
+Herbs contribute aroma while spices add both flavor and color. Basil, rosemary, and thyme are commonly used herbs. Spices such as cumin and paprika create distinctive flavor profiles.
+
+## Food Safety
+
+Kitchen safety is essential during food preparation. Raw meats should be handled carefully to prevent contamination. Proper handwashing reduces foodborne illness risks.
+
+## Grilling
+
+Grilling exposes food to direct heat. This cooking method creates unique flavors and textures. Many grilled foods develop a characteristic smoky taste.
+
+## Soups and Stews
+
+Soups and stews can be prepared using seasonal vegetables and proteins. Slow cooking allows flavors to blend over time. Different cultures have developed distinctive soup traditions.
+
+## Restaurant Operations
+
+Restaurants depend on efficient kitchen workflows. Chefs coordinate food preparation, inventory management, and quality control. Successful restaurants balance consistency with creativity.
 
 # Astronomy
 
-Astronomy studies celestial objects and phenomena. Stars are massive spheres of plasma. Galaxies contain billions of stars. Black holes have extremely strong gravitational fields. Telescopes collect light from distant objects. Astronomers study planetary systems. The Milky Way contains hundreds of billions of stars. Supernova explosions create heavy elements. Dark matter remains poorly understood. Space missions expand scientific knowledge. Researchers analyze astronomical images. Spectroscopy reveals chemical composition. Exoplanets orbit stars outside our solar system. Radio telescopes detect signals from space. Planetary motion follows gravitational laws. Cosmic radiation travels across the universe. Observatories collect vast quantities of data. Astrophysics explains many cosmic phenomena. International collaborations support scientific discovery. Astronomy continues to deepen humanity's understanding of the universe.
+## Stars
+
+Stars are massive spheres of plasma powered by nuclear fusion. They produce light and heat through energy generating reactions. The Sun is the closest star to Earth.
+
+## Galaxies
+
+Galaxies contain billions of stars, gas clouds, and dark matter. Spiral galaxies have rotating disk structures. Elliptical galaxies have more rounded shapes.
+
+## Black Holes
+
+Black holes possess extremely strong gravitational fields. Nothing can escape once it crosses the event horizon. Scientists study black holes through their effects on nearby matter.
+
+## Telescopes
+
+Telescopes collect electromagnetic radiation from distant objects. Optical telescopes gather visible light. Radio telescopes detect radio signals originating in space.
+
+## Exoplanets
+
+Exoplanets orbit stars outside our solar system. Thousands of exoplanets have been discovered. Researchers analyze these worlds to understand planetary formation.
+
+## Spectroscopy
+
+Spectroscopy allows scientists to determine chemical composition. Different elements produce distinct spectral signatures. Astronomers use spectroscopy to study stars and galaxies.
+
+## Dark Matter
+
+Dark matter does not emit light and cannot be directly observed. Evidence for dark matter comes from gravitational effects. Its exact nature remains unknown.
+
+## Space Missions
+
+Space missions expand scientific understanding of the universe. Robotic spacecraft explore planets, moons, and asteroids. Observational missions collect large quantities of scientific data.
+
+## Astrophysics
+
+Astrophysics applies physical laws to astronomical phenomena. Researchers investigate gravity, radiation, and cosmic evolution. The field connects astronomy with physics and mathematics.
+
+## International Collaboration
+
+Modern astronomy depends on international cooperation. Scientists share observational data and research findings. Large observatories and space projects often involve multiple countries.

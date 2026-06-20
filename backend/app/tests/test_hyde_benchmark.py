@@ -1,7 +1,7 @@
 from app.retrieval.hybrid_retriever import HybridRetriever
 from app.hyde.hyde_retriever import HyDERetriever
 
-query = "How are passwords stored?"
+query = "How do we add color and flavour in food?"
 
 print()
 print("=" * 80)

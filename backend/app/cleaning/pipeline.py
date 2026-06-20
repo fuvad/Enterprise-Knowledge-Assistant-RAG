@@ -1,7 +1,4 @@
-from app.cleaning.text_cleaner import (
-    TextCleaner
-)
-
+from app.cleaning.text_cleaner import TextCleaner
 
 class CleaningPipeline:
     def process(self, document):
