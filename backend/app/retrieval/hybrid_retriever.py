@@ -1,21 +1,35 @@
 from app.retrieval.dense_retriever import DenseRetriever
 from app.retrieval.bm25_retriever import BM25Retriever
-from app.retrieval.fusion import ReciprocalRankFusion
+from app.retrieval.fusion import ReciprocalRankFusion, WeightedFusion
 from app.vectorstore.qdrant_client import get_qdrant_client
 from app.vectorstore.collection_manager import CollectionManager
 from app.query.query_pipeline import QueryPipeline
 
 class HybridRetriever:
     def __init__(self):
+        print("Creating DenseRetriever")
         self.dense = DenseRetriever()
+        print("DenseRetriever created")
+        
+        print("Creating BM25Retriever")
         self.bm25 = BM25Retriever()
+        print("BM25Retriever created")
+        
+        print("Creating RRF")
         self.rrf = ReciprocalRankFusion()
+        print("RRF created")
+        
         self.client = get_qdrant_client()
         self.collection = CollectionManager().COLLECTION_NAME
         self.query_pipeline = QueryPipeline()
 
     def retrieve(self, query, k=5):
-        query = self.query_pipeline.process(query)
+        # print("\nORIGINAL QUERY:")
+        # print(query)
+        # query = self.query_pipeline.process(query)
+        
+        print("\nREWRITTEN QUERY:")
+        print(query)
         dense_results = self.dense.retrieve(query, k)
         bm25_results = self.bm25.retrieve(query, k)
 

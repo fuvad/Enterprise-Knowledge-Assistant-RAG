@@ -1,6 +1,6 @@
 from app.retrieval.benchmark import RetrievalBenchmark
 
-results = RetrievalBenchmark().compare("What is cooking?")
+results = RetrievalBenchmark().compare("cooking")
 
 print()
 print("=" * 80)

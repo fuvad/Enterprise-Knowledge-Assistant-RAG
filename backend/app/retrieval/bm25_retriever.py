@@ -1,3 +1,5 @@
+import re
+from spacy.lang.en.stop_words import STOP_WORDS
 from rank_bm25 import BM25Okapi
 from app.vectorstore.qdrant_client import get_qdrant_client
 from app.vectorstore.collection_manager import CollectionManager
@@ -21,8 +23,13 @@ class BM25Retriever:
 
         self.bm25 = BM25Okapi(tokenized_docs)     #Creates BM25 index. Builds the scoring structure. Like a keyworkd search engine
 
+    def tokenize(self, text):
+        tokens = re.findall(r"\b[a-zA-Z0-9]+\b", text.lower())
+
+        return [token for token in tokens if token not in STOP_WORDS]
+    
     def retrieve(self, query, k=5):
-        tokenized_query = query.lower().split()     #Query tokenization
+        tokenized_query = self.tokenize(query)     #Query tokenization
         scores = self.bm25.get_scores(tokenized_query)
 
         ranked = sorted(

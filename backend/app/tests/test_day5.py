@@ -3,7 +3,7 @@ from app.cleaning.pipeline import CleaningPipeline
 from app.metadata.pipeline import MetadataPipeline
 from app.chunking.pipeline import ChunkingPipeline
 
-document = IngestionManager().ingest("data/markdown/sample.md")
+document = IngestionManager().ingest("data/docx/sample.docx")
 document = CleaningPipeline().process(document)
 document = MetadataPipeline().process(document)
 

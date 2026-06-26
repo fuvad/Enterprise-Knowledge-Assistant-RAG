@@ -8,7 +8,7 @@ class SemanticChunker:
         self.splitter = LCSemanticChunker(
             embeddings,
             breakpoint_threshold_type="percentile",
-            breakpoint_threshold_amount=90
+            breakpoint_threshold_amount=80
             )
 
     def chunk(self, document):
