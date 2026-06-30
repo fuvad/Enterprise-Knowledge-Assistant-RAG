@@ -13,7 +13,7 @@ class ReciprocalRankFusion:
         return sorted(
             scores.items(),
             key=lambda x: x[1],     #Sort by score
-            reverse=True        #Descending
+            reverse=True        #Desc
         )
         
 class WeightedFusion:
